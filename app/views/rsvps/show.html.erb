@@ -1,0 +1,59 @@
+<div class="rsvp">
+
+  <h1>Näin olet vastannut:</h1>
+  <p id="notice"><%= notice %></p>
+
+<%= link_to 'Muokkaa', edit_rsvp_path(@rsvp) %>
+
+<p>
+  <strong>Nimi:</strong>
+  <%= @rsvp.name %>
+</p>
+
+<p>
+  <strong>Olen:</strong>
+  <% if @rsvp.attending %>
+      Tulossa!
+  <% else %>
+      Estynyt saapumaan.
+  <% end %>
+</p>
+
+<p>
+  <strong>Ruokavalio:</strong>
+  <%= @rsvp.food %>
+<% unless @rsvp.other.nil?%>
+    <%= @rsvp.other%>
+    <% end %>
+</p>
+<p>
+  <strong>Juomapolitiikka:</strong>
+  <%= @rsvp.drink %>
+</p>
+
+<p>
+  <strong>Sauna:</strong>
+  <%= @rsvp.sauna %>
+</p>
+
+<p>
+  <strong>Tanssibiisitoive:</strong>
+  <%= @rsvp.wishlist %>
+</p>
+
+<p>
+  <strong>Star Wars:</strong>
+  <%= @rsvp.stars %>
+</p>
+
+<p>
+  <strong>Kokis:</strong>
+  <%= @rsvp.coke %>
+</p>
+
+<p>
+  <strong>Sheriffi:</strong>
+  <%= @rsvp.sheriff %>
+</p>
+</div>
+

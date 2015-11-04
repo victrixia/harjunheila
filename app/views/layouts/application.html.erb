@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link href='https://fonts.googleapis.com/css?family=Rubik:700,400|Alegreya+Sans+SC:400,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <title>Harjunheila</title>
+</head>
+
+
+<% if current_user %>
+<header class="top">
+
+  <%= render 'layouts/navigation' %>
+</header>
+<% end %>
+
+<body>
+
+<div class="yieldcontainer">
+<%= yield %>
+</div>
+</body>
+</html>

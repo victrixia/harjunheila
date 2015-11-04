@@ -1,0 +1,61 @@
+<%= form_for(@rsvp) do |f| %>
+  <% if @rsvp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rsvp.errors.count, "error") %> Tuollaisia virheitä tuli:</h2>
+
+      <ul>
+      <% @rsvp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Nimi joka kirjoitetaan plaseerauskorttiin" %>
+    <%= f.text_field :name, value: (@rsvp.name.nil?) ? current_user.username : @rsvp.name %>
+  </div>
+  <div class="field">
+    <%= f.label :attending, "Olen..." %>
+    <%= f.radio_button :attending, true %>
+    <%= f.label(:attending, "...NIIN tulossa!", :value => "true", :class => "floating") %>
+    <%= f.radio_button(:attending, false) %>
+    <%= f.label(:attending, "...valitettavasti estynyt.", :value => "false", :class => "floating") %>
+  </div>
+  <div class="field">
+    <%= f.label "Ruokarajoitteet:" %>
+    <%= f.select :food, options_for_select(@foods, @rsvp.food), {},
+    :onChange=>"show_other(this.options[this.selectedIndex].value);" %>
+  </div>
+  <div class="field" id="muumita">
+    <%= f.label "Muu, mikä:" %>
+    <%= f.text_area :other, value: @rsvp.other %>
+  </div>
+    <div class="field">
+      <%= f.label "Juon..." %>
+      <%= f.select :drink, options_for_select(@drink, @rsvp.drink) %>
+    </div>
+  <div class="field">
+    <%= f.label "Saunon, jos..." %>
+    <%= f.select :sauna, options_for_select(@sauna, @rsvp.sauna) %>
+  </div>
+  <div class="field">
+    <%= f.label "Lupaan tanssia, jos tämä biisi soi:" %>
+    <%= f.text_field :wishlist %>
+  </div>
+  <div class="field">
+    <%= f.label "Valitse:" %>
+    <%= f.select :stars, options_for_select(@stars, @rsvp.stars) %>
+  </div>
+  <div class="field">
+    <%= f.label "Valitse:" %>
+    <%= f.select :coke, options_for_select(@cola, @rsvp.coke) %>
+  </div>
+  <div class="field">
+    <%= f.label "Valitse sheriffisi:" %>
+    <%= f.select :sheriff, options_for_select(@sheriffi, @rsvp.sheriff) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

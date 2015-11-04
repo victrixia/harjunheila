@@ -1,0 +1,23 @@
+
+
+<article>
+
+  <section id="harjunheila">
+  <%= image_tag 'heilapvm.png' %>
+  </section>
+
+
+
+<section class="signin">
+
+  <p id="notice"><%= notice%></p>
+
+  <%= form_tag session_path do %>
+      <p class="form input-list clearfix">Käyttäjätunnus<br> <%= text_field_tag :username, params[:username] %></p>
+      <p class="form input-list clearfix">Salasana <br><%= password_field_tag :password, params[:password] %></p>
+      <p class="form"><%= submit_tag "Kirjaudu sisään" %></p>
+  <% end %>
+
+
+</section>
+</article>

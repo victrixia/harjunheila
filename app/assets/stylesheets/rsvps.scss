@@ -1,0 +1,64 @@
+// Place all the styles related to the rsvps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.rsvp {
+
+  width: 70%;
+  position: relative;
+  left: 20%;
+
+}
+
+ .rsvp p {
+
+   font-size: 130%;
+   line-height: 150%;
+   font-family: 'Rubik', sans-serif;
+   padding-top: 10px;
+ }
+
+
+  .rsvp a {
+    text-decoration: none;
+    font-size: 150%;
+    line-height: 150%;
+    padding: 10px;
+    margin: 0 15px ;
+    font-family: 'Rubik', sans-serif;
+    background-color: #BBBBBB;
+
+}
+
+.rsvp h1 {
+  font-family: "Alegreya Sans SC", Helvetica, sans-serif;
+  font-size: 300%;
+  color: #001155;
+}
+
+.table-big {
+  padding-top: 10px;
+  position: absolute;
+  left: -100px;
+  padding-bottom: 50px;
+}
+
+table {
+
+  width: 130%;
+
+}
+
+td {
+  padding: 5px;
+}
+
+tbody tr {
+  border-bottom: thin #ffffff;
+  background-color: #EFEFEF;
+}
+
+tbody tr:hover{
+  background-color: #BBBBBB;
+
+}
