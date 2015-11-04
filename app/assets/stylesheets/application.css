@@ -50,7 +50,7 @@ form input {
 
 .top {
     width: auto;
-    height: 400px;
+    height: 450px;
 }
 
 .keskitys {
@@ -189,4 +189,5 @@ input[type="text"]:focus, input[type="password"]:focus {
 .infosivu p {
     font-size: 120%;
     line-height: 150%;
+    text-align: justify;
 }

@@ -3,20 +3,31 @@ nav ul {
   margin: 10px;
   padding: 10px;
   overflow: hidden;
+  display: inline-block;
+}
+
+* html .navbar ul {
+  /* Target IE6 */
+  display: inline;
+}
+
+* + html .navbar ul {
+  /* Target IE7 */
+  display: inline;
 }
 
 nav li {
   float: left;
+  display: inline;
 }
 
 nav a:link, nav a:visited {
-  display: block;
-  width: 200px;
+
+  width: auto;
   font-weight: bold;
-  font-size: 120%;
+  font-size: 140%;
   font-family: 'Alegreya Sans SC', sans-serif;
-  text-align: center;
-  padding: 4px;
+  padding: 0 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -41,4 +52,14 @@ nav a:hover, nav a:active {
 .navikuva {
   position: absolute;
   left: -535px;
+}
+
+.navbar {
+
+  z-index: 100;
+  position: relative;
+  top: 530px;
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
