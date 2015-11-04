@@ -1,0 +1,36 @@
+.harjunheilakuva {
+
+    position: absolute;
+    left: -395px;
+}
+
+.harjunheila {
+    position: relative;
+    left: 50%;
+}
+
+
+.signinform {
+
+    position: absolute;
+    left: -150px;
+    top: 350px;
+
+}
+
+.signin {
+
+    position: absolute;
+    left: 50%;
+    top:50%;
+}
+
+.etusivucontainer {
+    position: relative;
+    padding: 10px;
+}
+
+
+
+
+
