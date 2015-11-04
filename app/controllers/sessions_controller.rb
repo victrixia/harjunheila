@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   def new
     # renderöi kirjautumissivun
+    if current_user
+      redirect_to info_path
+    end
   end
 
   def create
