@@ -25,7 +25,7 @@ function toggle_visibility(id) {
 
 function show_other(value) {
     if (value === "Muu, mikä:") {
-        toggle_visibility("muumita");
+        show();
     } else {
 
         hide();
@@ -36,5 +36,11 @@ function show_other(value) {
 function hide(){
     var e = document.getElementById("muumita");
         e.style.display = 'none';
+}
+
+
+function show(){
+    var e = document.getElementById("muumita");
+    e.style.display = 'block';
 }
 

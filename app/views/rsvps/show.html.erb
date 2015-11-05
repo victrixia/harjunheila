@@ -1,59 +1,66 @@
 <div class="rsvp">
 
   <h1>Näin olet vastannut:</h1>
+
   <p id="notice"><%= notice %></p>
 
-<%= link_to 'Muokkaa', edit_rsvp_path(@rsvp) %>
+  <p><%= link_to 'Muokkaa', edit_rsvp_path(@rsvp) %></p>
 
-<p>
-  <strong>Nimi:</strong>
-  <%= @rsvp.name %>
-</p>
+  <table>
 
-<p>
-  <strong>Olen:</strong>
-  <% if @rsvp.attending %>
-      Tulossa!
-  <% else %>
-      Estynyt saapumaan.
-  <% end %>
-</p>
+    <tr>
+      <td><strong>Nimi:</strong></td>
+      <td><%= @rsvp.name %></td>
+    </tr>
 
-<p>
-  <strong>Ruokavalio:</strong>
-  <%= @rsvp.food %>
-<% unless @rsvp.other.nil?%>
-    <%= @rsvp.other%>
-    <% end %>
-</p>
-<p>
-  <strong>Juomapolitiikka:</strong>
-  <%= @rsvp.drink %>
-</p>
+    <tr>
+      <td><strong>Olen:</strong></td>
+      <% if @rsvp.attending %>
+          <td>  Tulossa!</td>
+      <% else %>
+          <td> Estynyt saapumaan.</td>
+      <% end %>
+    </tr>
 
-<p>
-  <strong>Sauna:</strong>
-  <%= @rsvp.sauna %>
-</p>
+    <tr>
+     <td><strong>Ruokavalio:</strong></td>
+      <td>  <%= @rsvp.food %>
+      <% unless @rsvp.other.nil? %>
+          <%= @rsvp.other %>
+      <% end %>
+      </td>
+    </tr>
 
-<p>
-  <strong>Tanssibiisitoive:</strong>
-  <%= @rsvp.wishlist %>
-</p>
+    <tr>
+      <td>  <strong>Juomapolitiikka:</strong></td>
+      <td>  <%= @rsvp.drink %></td>
+    </tr>
 
-<p>
-  <strong>Star Wars:</strong>
-  <%= @rsvp.stars %>
-</p>
+    <tr>
+      <td> <strong>Sauna:</strong></td>
+      <td>   <%= @rsvp.sauna %></td>
+    </tr>
 
-<p>
-  <strong>Kokis:</strong>
-  <%= @rsvp.coke %>
-</p>
+    <tr>
+      <td> <strong>Tanssibiisitoive:</strong></td>
+      <td>  <%= @rsvp.wishlist %></td>
+    </tr>
 
-<p>
-  <strong>Sheriffi:</strong>
-  <%= @rsvp.sheriff %>
-</p>
+    <tr>
+      <td>  <strong>Star Wars:</strong></td>
+      <td>  <%= @rsvp.stars %></td>
+    </tr>
+
+    <tr>
+      <td>  <strong>Kokis:</strong></td>
+      <td>  <%= @rsvp.coke %></td>
+    </tr>
+
+    <tr>
+      <td> <strong>Sheriffi:</strong></td>
+      <td>  <%= @rsvp.sheriff %></td>
+    </tr>
+  </table>
+
 </div>
 

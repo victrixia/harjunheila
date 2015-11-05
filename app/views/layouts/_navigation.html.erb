@@ -9,6 +9,7 @@
         <% if is_admin? %>
             <li> <%= link_to 'Muiden vastaukset', rsvps_path %></li>
             <li> <%= link_to 'Kaikki tilit', users_path %></li>
+            <li> <%= link_to 'Luo uusi vieras', new_user_path %></li>
         <% end %>
 
         <% if current_user.rsvp.nil? %>
@@ -22,7 +23,7 @@
         <% end %>
 
         <li><%= link_to 'Kirjaudu ulos', signout_path, method: :delete %></li>
-        <li><i class="kirjautunut"><%= current_user.realname %> kirjautunut sisään</i></li>
+        <li class="kirjautunut"><%= current_user.realname %> kirjautunut sisään</li>
 
 
       </ul>
