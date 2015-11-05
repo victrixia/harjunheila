@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
   has_secure_password
-  belongs_to :rsvp
+  has_one :rsvp, inverse_of: :user
 end

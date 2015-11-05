@@ -18,6 +18,9 @@ class RsvpsController < ApplicationController
   # GET /rsvps/new
   def new
     @rsvp = Rsvp.new
+    unless current_user.rsvp.nil?
+      redirect_to edit_rsvp_path(current_user.rsvp)
+    end
   end
 
   # GET /rsvps/1/edit
@@ -32,8 +35,8 @@ class RsvpsController < ApplicationController
 
     respond_to do |format|
       if @rsvp.save
-        @rsvp.user = current_user
-        current_user.rsvp = @rsvp
+        # @rsvp.user = current_user
+        # current_user.rsvp = @rsvp
         format.html { redirect_to @rsvp, notice: 'Vastaus luotu onnistuneesti!' }
         format.json { render :show, status: :created, location: @rsvp }
       else
@@ -84,6 +87,6 @@ class RsvpsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rsvp_params
-      params.require(:rsvp).permit(:name, :attending, :food, :drink, :sauna, :wishlist, :stars, :coke, :sheriff, :other)
+      params.require(:rsvp).permit(:name, :attending, :food, :drink, :sauna, :wishlist, :stars, :coke, :sheriff, :other, :user_id)
     end
 end

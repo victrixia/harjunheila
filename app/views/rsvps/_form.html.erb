@@ -55,6 +55,7 @@
     <%= f.label "Valitse sheriffisi:" %>
     <%= f.select :sheriff, options_for_select(@sheriffi, @rsvp.sheriff) %>
   </div>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="actions">
     <%= f.submit "Lähetä" %>
   </div>
