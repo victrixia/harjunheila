@@ -6,6 +6,11 @@
       <ul class="navbar-menu">
         <li><%= link_to 'Info', info_path %></li>
 
+        <% if is_admin? %>
+            <li> <%= link_to 'Muiden vastaukset', rsvps_path %></li>
+            <li> <%= link_to 'Kaikki tilit', users_path %></li>
+        <% end %>
+
         <% if current_user.rsvp.nil? %>
 
             <li> <%= link_to 'RSVP', new_rsvp_path %></li>
@@ -15,12 +20,10 @@
             <li> <%= link_to 'RSVP', rsvp_path(current_user.rsvp) %></li>
 
         <% end %>
-        <li><i class="kirjautunut"><%= current_user.username %> kirjautunut sisään</i></li>
 
-        <% if is_admin? %>
-            <li> <%= link_to 'Muiden vastaukset', rsvps_path %></li>
-            <li> <%= link_to 'Kaikki tilit', users_path %></li>
-        <% end %>
         <li><%= link_to 'Kirjaudu ulos', signout_path, method: :delete %></li>
+        <li><i class="kirjautunut"><%= current_user.realname %> kirjautunut sisään</i></li>
+
+
       </ul>
 </nav>

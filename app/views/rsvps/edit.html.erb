@@ -1,10 +1,13 @@
 
 <div class="kaavake">
   <p id="notice"><%= notice %></p>
-  <h1>Muokataan RSVP:tä</h1>
-  <div class="keskitys">
+  <div class="keskitys rsvp">
+
+    <h1>Muokkaa vastaustasi:</h1>
+    <div class="rsvp navbuttons">
     <%= link_to 'Näytä', @rsvp %>
     <%= link_to 'Takaisin', info_path %>
+    </div>
   </div>
 
 <%= render 'form' %>

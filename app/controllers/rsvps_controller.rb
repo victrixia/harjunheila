@@ -34,7 +34,7 @@ class RsvpsController < ApplicationController
       if @rsvp.save
         @rsvp.user = current_user
         current_user.rsvp = @rsvp
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
+        format.html { redirect_to @rsvp, notice: 'Vastaus luotu onnistuneesti!' }
         format.json { render :show, status: :created, location: @rsvp }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class RsvpsController < ApplicationController
   def update
     respond_to do |format|
       if @rsvp.update(rsvp_params) and current_user == @rsvp.user
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully updated.' }
+        format.html { redirect_to @rsvp, notice: 'Vastaus päivitetty onnistuneesti!' }
         format.json { render :show, status: :ok, location: @rsvp }
       else
         format.html { render :edit }

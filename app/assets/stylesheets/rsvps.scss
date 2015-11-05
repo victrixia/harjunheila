@@ -4,9 +4,10 @@
 
 .rsvp {
 
-  width: 70%;
+  width: 50%;
   position: relative;
-  left: 20%;
+  margin: 0 auto;
+  padding: 20px;
 
 }
 
@@ -33,7 +34,13 @@
 .rsvp h1 {
   font-family: "Alegreya Sans SC", Helvetica, sans-serif;
   font-size: 300%;
-  color: #001155;
+  color: #47019C;
+}
+
+.rsvp .navbuttons {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .table-big {

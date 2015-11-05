@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label "Nimi joka kirjoitetaan plaseerauskorttiin" %>
-    <%= f.text_field :name, value: (@rsvp.name.nil?) ? current_user.username : @rsvp.name %>
+    <%= f.text_field :name, value: (@rsvp.name.nil?) ? current_user.realname : @rsvp.name %>
   </div>
   <div class="field">
     <%= f.label :attending, "Olen..." %>
@@ -56,6 +56,6 @@
     <%= f.select :sheriff, options_for_select(@sheriffi, @rsvp.sheriff) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Lähetä" %>
   </div>
 <% end %>
