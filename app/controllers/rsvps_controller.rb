@@ -79,7 +79,7 @@ class RsvpsController < ApplicationController
     def set_options
       @foods = ["Kaikkiruokainen", "Kasvis", "Vegaani", "Gluteeniton", "Muu, mikä:"]
       @drink = ["...lempijuomaani alkoholia!", "...vain alkoholittomia juomia!", "...kohtuudella"]
-      @sauna = ["...naisten vuoro on erikseen.", "...miesten vuoro on erikseen.", "...siellä on NAISIAAA","...siellä on MIEHIÄÄÄ","...ihan sama, koen tällaisen sukupuolijaottelun vanhanaikaiseksi."]
+      @sauna = ["...naisten vuoro on erikseen.", "...miesten vuoro on erikseen.", "...siellä on NAISIAAA","...siellä on MIEHIÄÄÄ","...ihan sama, koen tällaisen sukupuolijaottelun vanhanaikaiseksi.", "... en sauno ollenkaan."]
       @stars = ["Star Wars", "Star Trek"]
       @sheriffi = ["*", "**", "***"]
       @cola = ["Coca Cola", "Pepsi"]
